@@ -30,8 +30,9 @@ async function userLoginFormHandler(event) {
 }
 
 function userSignupRoute() {
-  document.location.replace("/signup")
+  console.log('signup clicked')
+  // document.location.replace("/signup")
 };
 
-document.querySelector('.user-login-form').addEventListener('submit', userLoginFormHandler);
-document.querySelector('#user-signup').addEventListener('click', userSignupRoute);
+document.querySelector('#login-btn').addEventListener('click', userLoginFormHandler);
+document.getElementById('user-signup').addEventListener('click', userSignupRoute);
