@@ -58,13 +58,7 @@ async function deleteHandler(event){
   }
 }
 
-function hideIcon(event){
-  event.preventDefault();
-  const hidesetting = document.getElementById('logout');
-  hidesetting.setAttribute('class', 'hide-t');
-} 
-hideIcon();
-document.querySelector('.btn').addEventListener('click', hideIcon);
+
 document.querySelector('#btn').addEventListener('click', settingHandler);
 document.querySelector('#del-btn').addEventListener('click', deleteHandler);
 
