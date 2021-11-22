@@ -64,7 +64,6 @@
         <label for="as-doc-id">Doctors</label>
         <select  id="as-doc-id" class="custom-select">
           {{#each doctors as |doctor|}}
-          <option value="">--Select--</option>
           <option value="{{doctor.id}}">{{doctor.last_name}}, {{doctor.name}}</option>
           {{/each}}
         </select>
