@@ -60,6 +60,6 @@ async function deleteHandler(event){
 }
 
 
-document.querySelector('#sub-btn').addEventListener('click', settingHandler);
+document.getElementById('sub-btn').addEventListener('click', settingHandler);
 document.querySelector('#del-btn').addEventListener('click', deleteHandler);
 
