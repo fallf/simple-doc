@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Doc</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body class="">
+  {{#unless loggedIn}}
+  <div class="back-img" >
+    {{/unless}}
+  <nav class="navbar  navbar-light" style="background-color: #92bde7;" >
+  <a class="navbar-brand" href="/login">Simple Doc</a>
+  <div>
+    {{#if loggedIn}}
+    
+     <a href="#">
+          <span  class="glyphicon glyphicon-log-out"></span>
+        </a>
+  <button id="logout" class="btn-no-style">Logout<span class="glyphicon glyphicon-log-out"></span></button>
+  <a  class="setting" id="sBtn" href="/user/{{user.id}}"> <i title="setting"  class="fa fa-gear" style="font-size:39px"></i></a>
+  {{/if}}
+</div>
+</nav>
+  
+  
+    <main class="content">
+     
+      {{{ body }}}
+    </main>
+  </div>
+  <footer>
+        Thanks for visiting!
+  </footer>
+  
+</body>
+
+</html>
+<script src="/javascript/setting.js"></script>

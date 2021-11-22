@@ -1,0 +1,53 @@
+
+<form class=" card user-signup-form">
+  <div> 
+    <h3 class="card-title">Sign-Up</h3>
+  </div>
+  <div class="row">
+  <div class="col">
+    <div class="form-group col">
+      <label for="name-signup">First Name:</label>
+      <input class="form-control" type="text" id="name-signup" />
+    </div>
+
+    <div class="form-group col">
+      <label for="lname-signup">Last Name:</label>
+      <input class="form-control" type="text" id="lname-signup" />
+    </div>
+   </div>
+   <div class="col">
+    <div class="form-group col">
+      <label for="username-signup">Username:</label>
+      <input class="form-control" type="text" id="username-signup" />
+    </div>
+
+    <div class="form-group col">
+      <label for="email-signup">Email:</label>
+      <input class="form-control" type="text" id="email-signup" />
+    </div>
+    
+  </div>
+  
+  </div>
+  <div class="form-group col">
+    <label for="password-signup">Password:</label>
+    <input class="form-control" type="password" id="password-signup" />
+  </div>
+  <p>
+    What is your role?
+    <div class="form-group">
+      <input type="radio" name="choice" value="1" id="doc-role-signup"/>
+      <label for="doc-role-signup">Doctor</label>
+      <input type="radio" name="choice" value="2" id="nur-role-signup"/>
+      <label for="nur-role-signup">Nurse</label>
+    </div>
+  </p>
+  <div>
+    <button class="btn" type="submit" id="user-signup-form">signup</button>
+  </div>
+  <div>
+   <a href="/login">Go Back</a>
+  </div>
+</form>
+
+<script src="/javascript/user-sign-up.js"></script>

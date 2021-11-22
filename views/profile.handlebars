@@ -1,0 +1,97 @@
+
+
+{{#if loggedIn}}
+
+{{!--Welcome--}}
+
+<h2>Welcome {{user.role.name}}:</h2>
+
+
+<p class="user-name">  {{user.name}} {{user.last_name}}</p>
+{{#ifCond user.role_id}}
+<div class="card-p">
+    <h2>Patients List</h2>
+    <div class="list-p">
+<ol class="doc-list">
+  {{#each patients as |patient|}}
+  <li class="card-p"> 
+    <article class="doc">
+      <div class="meta">
+        <a href="/patient/{{patient.id}}">{{patient.p_lname}}, {{patient.p_name}}</a>
+      </div>
+    </article>
+  </li>
+  {{/each}}
+  </div>
+</ol>
+</div>
+
+{{else}}
+    
+    {{!-- patient app handled by role under Nurse --}}
+
+ <section class="nurse-app">
+    <form class="card row card-patient">
+      <div class="app-title">
+        <h1>Patient Application Form</h1>
+      </div>
+       <div class="row">
+          {{!-- <div class="app-form"> --}}
+          <div class="text-box form-group col">
+              <label for="p-name">Name</label>
+              <input class="form-control" placeholder="John" id="p-name"  type="text">
+          </div>
+          <div class="text-box form-group col">
+              <label for="p-lname">Last name</label>
+              <input class="form-control" placeholder="Smith" id="p-lname" type="text">
+          </div>
+          <div class="text-box form-group col">
+            <label for="p-email">Email</label>
+            <input class="form-control" placeholder="j.smith@gmailcom" id="p-email" type="email">
+          </div>
+      </div>
+      </div>
+      <div class="row">
+      <div class="text-box form-group col">
+        <label for="p-dob">Date of Birth</label>
+        <input class="form-control" placeholder="01-02-1989" id="p-dob" type="text">
+      </div>
+      <div class="text-box form-group col">
+        <label for="p-sym">Symtoms</label>
+        <input class="form-control" placeholder="Symtoms" id="p-sym" type="text">
+      </div>
+      <div class="text-box form-group col">
+        <label for="as-doc-id">Doctors</label>
+        <select  id="as-doc-id" class="custom-select">
+          {{#each doctors as |doctor|}}
+          <option value="">--Select--</option>
+          <option value="{{doctor.id}}">{{doctor.last_name}}, {{doctor.name}}</option>
+          {{/each}}
+        </select>
+      </div>
+     </div>
+    </div>
+
+      <div class="submit-btn">
+        <button class="btn" id="btn">Submit</button>
+      </div>
+      <div id="newText"></div>
+  </form>
+</section> 
+
+
+<script src="/javascript/profile.js"></script>
+{{/ifCond}}
+
+
+<script src="/javascript/logout.js"></script>
+
+
+
+
+
+
+{{/if}}
+
+
+

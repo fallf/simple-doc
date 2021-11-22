@@ -1,0 +1,48 @@
+
+<h2 class="update-title">User's Setting</h2>
+<form class="setting-form card">
+    <div class="update-user">
+        
+    </div>
+    <div class="col-12">
+        <div class="col form-group">
+            <label for="name">Name</label>
+            <input class="form-control" id="upName" type="text" value="{{user.name}}">
+        </div>
+        <div class="col form-group">
+            <label for="name">Last name</label>
+            <input class="form-control" id="upLname" type="text" value="{{user.last_name}}">
+        </div>
+        <div class="col form-group">
+            <label for="name">Email</label>
+            <input class="form-control" id="upEmail" type="email" value="{{user.email}}">
+        </div>
+        <div class="col form-group">
+            <label  for="name">Username</label>
+            <input class="form-control" id="userName" type="text" value="{{user.username}}">
+        </div>
+        <div class="col form-group">
+            <label for="name">Password</label>
+            <input class="form-control" id="upPassword" type="password">
+        </div>
+        <div class="col form-group">
+            <p>Would you like to change your role?</p>
+            <input type="radio" name="choice" value="1" id="doc-role"/>
+      <label for="doc-role-signup">Doctor</label>
+      <input type="radio" name="choice" value="2" id="nur-role"/>
+      <label for="nur-role-signup">Nurse</label>
+        </div>
+    </div>
+    <div>
+        <button class="btn"id="btn">Summit Changes</button>
+    </div>
+    <div>
+        <button class="btn"id="del-btn">Delete User</button>
+    </div>
+     
+    <div>
+        <a href="/profile">Go Back</a>
+    </div>
+</form>
+
+<script src="/javascript/setting.js"></script>

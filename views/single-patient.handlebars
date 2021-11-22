@@ -1,0 +1,56 @@
+
+
+{{!--Welcome--}}
+<h2>Welcome</h2>
+
+  {{#if loggedIn}}
+  <p class="user-name"> {{singleUser.role.name}}: {{singleUser.name}} {{singleUser.last_name}}</p>
+ 
+
+
+ <div class="card patient-info">
+   <div class="title">
+    <h2>Patient Info</h2>
+   </div>
+   <div class="row card">
+     <div class="row">
+          <p class="col">Name: <span class="p-info" id="pat-name">{{singlePatient.p_name}}</span></p>
+          <p class="col">Last Name: <span class="p-info">{{singlePatient.p_lname}}</span> </p>
+        </div>
+          <div class="row">
+          <p class="col" id="pat-email">Email:<span class="p-info"> {{singlePatient.p_email}}</span></p>
+          <p class="col" id="pat-con">Reason for visit: <span class="p-info"> {{singlePatient.p_condition}}</span> </p>
+         
+        </div>
+         <p class="col">Date of Birth: <span class="p-info"> {{singlePatient.p_dob}} </span> </p>
+   </div>
+
+
+
+      <h3>Consultation note </h3>
+
+      <div class="contact">
+        <form id="email-form">
+        <div class="full">
+            
+            <textarea placeholder="Doctor's note- this note will be emailed onced summitted" class="note-comment" style="resize: none;" name="comment-body" rows="5" id="doc-comment"></textarea>
+        </div>
+
+        <div>
+            <button class="btn" id="update-btn">Submit</button>
+        </div>
+        <div>
+          <a href="/profile">Go back</a>
+        </div>
+        </form>
+      </div>  
+    </article>
+  </li>
+</ol>
+ </div>
+
+{{!-- pateint list --}}
+
+      {{!-- send patient email --}}
+      <script src="/javascript/single-patient.js"></script>
+ {{/if}}
