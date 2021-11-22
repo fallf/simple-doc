@@ -22,7 +22,7 @@ const transporter = nodemailer.createTransport({
       user: 'simpledoctest@gmail.com',
       pass: 'sfvsf123' // naturally, replace both with your real credentials or an application-specific password
     }
-  });
+});
 
 router.get('/', (req, res)=>{
 
@@ -128,7 +128,7 @@ router.put('/:id', async (req,res)=>{
        <ul style="list-style-type:none; padding-bottom: 10px;">
            <li>Telephone: (222)222-2222</li>
            <li>Email:
-               <a style="text-decoration: none; color:#eeeee4" href= "mailto: simpledoctesting@yahoo.com">simpledoctesting@yahoo.com</a>
+               <a style="text-decoration: none; color:#eeeee4" href= "mailto: simpledoctest@gmail.com">simpledoctest@gmail.com</a>
            </li>
            <li>Address: 333 West 59th St.<br>
                10019, New York, New York
@@ -140,7 +140,7 @@ router.put('/:id', async (req,res)=>{
 
     //send mail with defined transport object
         let mailOptions = {
-        from: '"SimpleDoc Consultation"<simpledoctesting@yahoo.com>', // sender address
+        from: '"SimpleDoc Consultation"<simpledoctest@gmail.com>', // sender address
         to: `${req.body.p_email}`, //list of receivers 
 
 

@@ -7,8 +7,7 @@ async function patientCommnetHandler(event) {
     const id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1
     ];
-    console.log(p_doc_comment)
-      console.log(id + "Look Here")
+    
 
 
       
