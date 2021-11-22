@@ -36,8 +36,7 @@ async function settingHandler(event){
       }
   }
 };
-// function sendNotification(){
-// }
+
 
 
 

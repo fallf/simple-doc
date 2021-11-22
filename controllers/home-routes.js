@@ -20,7 +20,29 @@ router.get('/login', (req, res) => {
 
 // Sign-up route
 router.get('/signup', (req, res) => {
-  res.render('signup')
+  User.create({
+    name: req.body.name,
+    last_name: req.body.last_name,
+    username: req.body.username,
+    email: req.body.email,
+    password:req.body.password,
+    role_id:req.body.role_id
+})
+
+.then(dbData => {
+console.log(dbData)
+req.session.save(() => {
+    req.session.user_id = dbData.id;
+    req.session.username = dbData.username;
+    req.session.loggedIn = true;
+    
+    
+});
+console.log(req.session.user_id)
+res.json(dbData)
+res.render('signup')
+})
+  
 })
 
 //User Profile route
