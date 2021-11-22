@@ -13,7 +13,6 @@ async function userSignupFormHandler(event) {
     var role_id = nurRole.value
   }
   if (name && last_name && username && email && password && role_id) {
-    console.log(role_id)
     const response = await fetch('/api/user/', {
       method: 'post',
       body: JSON.stringify({
