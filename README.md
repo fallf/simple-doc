@@ -41,7 +41,6 @@ The hospital staff will be able to create a user account:
 * Node.js
 * RESTful API.
 * MySQL
-* CSS
 * Nodemailer 
 * Handlebars 
 * Heroku
